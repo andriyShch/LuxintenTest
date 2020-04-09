@@ -1,0 +1,71 @@
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .catalog-product-view {
+        .product-sticky {
+            display: none;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #f8f8f8;
+            border: 1px solid #ccc;
+            z-index: 11;
+
+            &.shown {
+                display: block;
+            }
+
+            .container {
+                max-width: @layout__max-width;
+                margin: 0 auto;
+                padding: 5px 20px;
+                box-sizing: border-box;
+            }
+
+            img {
+                width: 50px;
+                margin-right: 35px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .sticky-product-name {
+                font-size: 18px;
+                word-break: break-word;
+                max-width: 550px;
+                vertical-align: middle;
+                display: inline-block;
+            }
+
+            .sticky-right {
+                float: right;
+                margin-top: 8px;
+                padding-bottom: 10px;
+
+                .cms-text {
+                    display: inline-block;
+                    text-align: right;
+                    max-width: 390px;
+                    margin-right: 20px;
+                    vertical-align: middle;
+                }
+                .sticky-product-price {
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    color: #34495e;
+                    vertical-align: middle;
+                    margin-right: 20px;
+                }
+
+                button {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}

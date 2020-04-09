@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="copyright" display="true"/>
+        <referenceBlock name="header.panel.wrapper" remove="true"/>
+        <container name="container01" label="test01" htmlTag="div" htmlId="product-sticky" htmlClass="product-sticky" after="breadcrumbs">
+            <block class="Magento\Cms\Block\Block" name="sticky-custom-text" as="sticky-custom-text">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">pdp-sticky</argument>
+                </arguments>
+            </block>
+        </container>
+    </body>
+</page>
+

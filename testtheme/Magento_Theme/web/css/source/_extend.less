@@ -1,0 +1,74 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .minicart-wrapper .action.showcart {
+        &:hover:before {
+            color: rgba(252, 58, 154, .5);
+        }
+    }
+    .nav-sections {
+        background: #fd75b8;
+        .navigation {
+            background: #fd75b8;
+            .level0 {
+                margin-right: 20px;
+                & > .level-top {
+                    color: #232323;
+                }
+                .has-active > .level-top {
+                    border-color: #232323;
+                }
+                .submenu a:hover {
+                    background: #feb0d7;
+                }
+            }
+        }
+    }
+
+    .page-header .panel.wrapper {
+        background: rgba(252, 58, 154, .5);
+    }
+    footer.page-footer {
+        background: #232323;
+        .footer.content .links a {
+            color: @color-white;
+        }
+        .newsletter {
+            .action.subscribe {
+                background: rgba(252, 58, 154, .7);
+                border-color: rgba(252, 58, 154, .2);
+            }
+        }
+    }
+    .action.primary {
+        background: rgba(252, 58, 154, .7);
+        border-color: rgba(252, 58, 154, .2);
+        &:hover {
+            background: rgba(252, 58, 154, 1);
+            border-color: rgba(252, 58, 154, .7);
+        }
+    }
+    .copyright {
+        background: @color-black;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+    .nav-sections {
+        &.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 10;
+        }
+    }
+}
